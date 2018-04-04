@@ -14,3 +14,8 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/syberia_raphael.mk
+
+COMMON_LUNCH_CHOICES := \
+    syberia_raphael-user \
+    syberia_raphael-userdebug \
+    syberia_raphael-eng

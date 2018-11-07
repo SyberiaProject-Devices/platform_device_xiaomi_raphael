@@ -44,6 +44,8 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-syberia \
     $(LOCAL_PATH)/overlay-system
 
+PRODUCT_ENFORCE_RRO_TARGETS := *
+
 # AID/fs configs
 PRODUCT_PACKAGES += \
     fs_config_files

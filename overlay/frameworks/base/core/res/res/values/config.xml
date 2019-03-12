@@ -1119,4 +1119,7 @@
 
     <!-- Enable dual LTE capability support-->
     <bool name="config_dual_LTE_capability">true</bool>
+
+  <!-- Lawnstep -->
+    <string name="config_recentsComponentName" translatable="false">ch.deletescape.lawnchair.ci/com.android.quickstep.RecentsActivity</string>
 </resources>

@@ -527,9 +527,6 @@
 	
     <!-- Should we filter any display modes which are unampped? -->
     <bool name="config_filterDisplayModes">true</bool>
-
-    <!-- Whether device has a physical display cutout -->
-    <bool name="config_physicalDisplayCutout">true</bool>
 	
      <!-- Does the battery LED support multiple colors?
          Used to decide if the user can change the colors -->

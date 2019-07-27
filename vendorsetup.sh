@@ -1,0 +1,2 @@
+add_lunch_combo beast_raphael-userdebug
+export SKIP_ABI_CHECKS=true

@@ -8,6 +8,7 @@ on init
     mount none /system/lib64/hw/power.qcom.so /vendor/lib64/hw/power.qcom.so bind
     mount none /system/etc/audio_policy_configuration.xml /vendor/etc/audio/audio_policy_configuration.xml bind
     mount none /system/lib/soundfx/libjamesdsp.so /vendor/lib/soundfx/libjamesdsp.so bind
+    mount none /system/etc/media_codecs.xml /vendor/etc/media_codecs.xml bind
 	
     chown system camera /dev/drv8846_dev
     chown system camera /dev/akm09970

@@ -542,5 +542,8 @@
 	
     <!-- Whether the device has outdated qti-telephony-common.jar -->
     <bool name="config_oldQtiTelephony">false</bool>
+	
+    <!-- Whether device supports double tap to wake -->
+     <bool name="config_supportDoubleTapWake">true</bool>
 
 </resources>

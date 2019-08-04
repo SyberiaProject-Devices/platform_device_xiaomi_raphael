@@ -120,7 +120,7 @@ TARGET_COPY_OUT_VENDOR := vendor
 
 # Power
 TARGET_USES_INTERACTION_BOOST := true
-TARGET_TAP_TO_WAKE_NODE := "/dev/input/event4"
+TARGET_TAP_TO_WAKE_NODE := "/dev/input/event5"
 
 # QCOM
 TARGET_USE_SDCLANG := true

@@ -1,5 +1,4 @@
-//
-// Copyright (C) 2018 The LineageOS Project
+// Copyright (C) 2019 The LineageOS Project
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -20,12 +19,13 @@ cc_binary {
     init_rc: ["android.hardware.light@2.0-service.xiaomi_raphael.rc"],
     srcs: ["service.cpp", "Light.cpp"],
     shared_libs: [
+        "android.hardware.light@2.0",
+        "libbase",
         "libhardware",
         "libhidlbase",
         "libhidltransport",
-        "liblog",
         "libhwbinder",
+        "liblog",
         "libutils",
-        "android.hardware.light@2.0",
     ],
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 The LineageOS Project
+ * Copyright (C) 2018-2019 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,16 +22,11 @@
 
 #include <fstream>
 
-#define LEDS            "/sys/class/leds/"
-#define LCDBACKLIGHT            "/sys/class/backlight/"
-
-#define LCD_LED         LCDBACKLIGHT "panel0-backlight/"
-#define BLUE_LED       LEDS "green/"
+#define LCD_LED         "/sys/class/backlight/panel0-backlight/"
+#define WHITE_LED       "/sys/class/leds/white/"
 
 #define BREATH          "breath"
 #define BRIGHTNESS      "brightness"
-#define DELAY_OFF	    "delay_off"
-#define DELAY_ON 	    "delay_on"
 
 #define MAX_LED_BRIGHTNESS    255
 #define MAX_LCD_BRIGHTNESS    4095
@@ -86,24 +81,26 @@ static inline uint32_t getScaledBrightness(const LightState& state, uint32_t max
     return scaleBrightness(getBrightness(state), maxBrightness);
 }
 
-static void handleBacklight(Type /* type */, const LightState& state) {
+static void handleBacklight(const LightState& state) {
     uint32_t brightness = getScaledBrightness(state, MAX_LCD_BRIGHTNESS);
     set(LCD_LED BRIGHTNESS, brightness);
 }
 
-static void setNotification(const LightState& state) {
-    uint32_t redBrightness = getScaledBrightness(state, MAX_LED_BRIGHTNESS);
+static void handleNotification(const LightState& state) {
+    uint32_t whiteBrightness = getScaledBrightness(state, MAX_LED_BRIGHTNESS);
 
-    /* Disable breathing */
-    set(BLUE_LED BREATH, 0);
+    /* Disable breathing or blinking */
+    set(WHITE_LED BREATH, 0);
 
-    if (state.flashMode == Flash::TIMED) {
-        /* Enable breathing */
-        set(BLUE_LED BREATH, 1);
-        set(BLUE_LED DELAY_OFF, state.flashOnMs);
-	set(BLUE_LED DELAY_ON, state.flashOffMs);
-    } else {
-        set(BLUE_LED BRIGHTNESS, redBrightness);
+    switch (state.flashMode) {
+        case Flash::HARDWARE:
+        case Flash::TIMED:
+            /* Breathing */
+            set(WHITE_LED BREATH, 1);
+            break;
+        case Flash::NONE:
+        default:
+            set(WHITE_LED BRIGHTNESS, whiteBrightness);
     }
 }
 
@@ -111,43 +108,15 @@ static inline bool isLit(const LightState& state) {
     return state.color & 0x00ffffff;
 }
 
-/*
- * Keep sorted in the order of importance.
- */
-static const LightState offState = {};
-static std::vector<std::pair<Type, LightState>> notificationStates = {
-    { Type::ATTENTION, offState },
-    { Type::NOTIFICATIONS, offState },
-    { Type::BATTERY, offState },
-};
-
-static void handleNotification(Type type, const LightState& state) {
-    bool handled = false;
-
-    for(auto it : notificationStates) {
-        if (it.first == type) {
-            it.second = state;
-        }
-
-        if  (!handled && isLit(it.second)) {
-            setNotification(it.second);
-            handled = true;
-        }
-    }
-
-    if (!handled) {
-        setNotification(offState);
-    }
-}
-
-static std::map<Type, std::function<void(Type type, const LightState&)>> lights = {
+/* Keep sorted in the order of importance. */
+static std::vector<LightBackend> backends = {
     { Type::ATTENTION, handleNotification },
     { Type::NOTIFICATIONS, handleNotification },
     { Type::BATTERY, handleNotification },
     { Type::BACKLIGHT, handleBacklight },
 };
 
-} // anonymous namespace
+}  // anonymous namespace
 
 namespace android {
 namespace hardware {
@@ -156,18 +125,34 @@ namespace V2_0 {
 namespace implementation {
 
 Return<Status> Light::setLight(Type type, const LightState& state) {
-    auto it = lights.find(type);
+    LightStateHandler handler = nullptr;
 
-    if (it == lights.end()) {
+    /* Lock global mutex until light state is updated. */
+    std::lock_guard<std::mutex> lock(globalLock);
+
+    /* Update the cached state value for the current type. */
+    for (LightBackend& backend : backends) {
+        if (backend.type == type) {
+            backend.state = state;
+            handler = backend.handler;
+        }
+    }
+
+    /* If no handler has been found, then the type is not supported. */
+    if (!handler) {
         return Status::LIGHT_NOT_SUPPORTED;
     }
 
-    /*
-     * Lock global mutex until light state is updated.
-     */
-    std::lock_guard<std::mutex> lock(globalLock);
+    /* Light up the type with the highest priority that matches the current handler. */
+    for (LightBackend& backend : backends) {
+        if (handler == backend.handler && isLit(backend.state)) {
+            handler(backend.state);
+            return Status::SUCCESS;
+        }
+    }
 
-    it->second(type, state);
+    /* If no type has been lit up, then turn off the hardware. */
+    handler(state);
 
     return Status::SUCCESS;
 }
@@ -175,8 +160,8 @@ Return<Status> Light::setLight(Type type, const LightState& state) {
 Return<void> Light::getSupportedTypes(getSupportedTypes_cb _hidl_cb) {
     std::vector<Type> types;
 
-    for (auto const& light : lights) {
-        types.push_back(light.first);
+    for (const LightBackend& backend : backends) {
+        types.push_back(backend.type);
     }
 
     _hidl_cb(types);

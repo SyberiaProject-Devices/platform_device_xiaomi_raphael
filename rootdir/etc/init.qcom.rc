@@ -4,7 +4,6 @@ on init
     mount none /system/lib64/soundfx/libvolumelistener.so /vendor/lib64/soundfx/libvolumelistener.so bind
     mount none /system/lib/soundfx/libvolumelistener.so /vendor/lib/soundfx/libvolumelistener.so bind
     mount none /system/overlay/BluetoothResCommon.apk /vendor/overlay/BluetoothResCommon.apk bind
-    mount none /system/lib64/hw/power.qcom.so /vendor/lib64/hw/power.qcom.so bind
     mount none /system/etc/audio_policy_configuration.xml /vendor/etc/audio/audio_policy_configuration.xml bind
     mount none /system/lib/soundfx/libjamesdsp.so /vendor/lib/soundfx/libjamesdsp.so bind
     mount none /system/etc/media_codecs.xml /vendor/etc/media_codecs.xml bind
@@ -13,6 +12,9 @@ on init
     chown system camera /dev/akm09970
     chmod 0660 /dev/drv8846_dev
     chmod 0660 /dev/akm09970
+	
+    chown system system /dev/input/event3
+    chmod 0666 /dev/input/event3
 
 service vendor.motor /vendor/bin/hw/vendor.xiaomi.hardware.motor@1.0-service
     class hal

@@ -6,3 +6,6 @@ allow init vendor_file:file mounton;
 
 # Allow init to mount offmode charging daemon
 allow init rootfs:file mounton;
+
+# Allow init to mount overlay files
+allow init vendor_overlay_file:file mounton;

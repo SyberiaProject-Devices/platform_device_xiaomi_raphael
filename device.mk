@@ -129,6 +129,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     XiaomiParts
 	
+# Placeholder
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/placeholder:system/etc/placeholder
+	
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.2-service

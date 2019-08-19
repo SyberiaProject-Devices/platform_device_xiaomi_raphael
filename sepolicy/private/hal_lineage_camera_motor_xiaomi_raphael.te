@@ -1,6 +1,8 @@
 type hal_lineage_camera_motor_xiaomi_raphael, domain, coredomain;
 hal_server_domain(hal_lineage_camera_motor_xiaomi_raphael, hal_lineage_camera_motor)
 
+permissive hal_lineage_camera_motor_xiaomi_raphael;
+
 type hal_lineage_camera_motor_xiaomi_raphael_exec, exec_type, file_type;
 init_daemon_domain(hal_lineage_camera_motor_xiaomi_raphael)
 

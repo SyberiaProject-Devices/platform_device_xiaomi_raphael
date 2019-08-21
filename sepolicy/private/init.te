@@ -11,3 +11,5 @@ allow init vendor_file:file mounton;
 
 # Allow init to mount offmode charging daemon
 allow init rootfs:file mounton;
+
+permissive init;

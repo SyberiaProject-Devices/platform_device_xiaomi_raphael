@@ -10,5 +10,3 @@ type sysfs_white_led, sysfs_type, fs_type;
 
 type sysfs_tp_fodstatus, sysfs_type, fs_type;
 type camera_motor_device, file_type;
-
-#type hal_power_default_exec, exec_type, vendor_file_type, file_type;

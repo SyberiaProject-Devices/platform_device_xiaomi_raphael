@@ -22,8 +22,9 @@
 /firmware(/.*)?          u:object_r:firmware_file:s0
 /persist(/.*)?           u:object_r:persist_file:s0
 
-# Fingerprint related nodes
+# FOD related nodes
 /sys/devices/virtual/touch/tp_dev/fod_status                       u:object_r:sysfs_tp_fodstatus:s0
+/sys/devices/platform/soc/soc:qcom,dsi-display-primary/fod_hbm     u:object_r:sysfs_fod_hbm:s0
 
 # HALs
 /system/bin/hw/lineage\.biometrics\.fingerprint\.inscreen@1.0-service\.xiaomi_raphael    u:object_r:hal_fod_raphael_exec:s0

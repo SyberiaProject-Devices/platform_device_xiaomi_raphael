@@ -1,10 +1,9 @@
 on init
-    start jamesdsp
-    mount none /dev/null /vendor/etc/init/android.hardware.power@1.2-service.rc
     mount none /sbin/chargeonlymode /sbin/charger bind
     mount none /system/lib/soundfx/libjamesdsp.so /vendor/lib/soundfx/libjamesdsp.so bind
     mount none /system/lib64/soundfx/libvolumelistener.so /vendor/lib64/soundfx/libvolumelistener.so bind
     mount none /system/lib/soundfx/libvolumelistener.so /vendor/lib/soundfx/libvolumelistener.so bind
+    mount none /system/etc/dt2w /vendor/etc/init/android.hardware.power@1.2-service.rc bind
     mount none /system/etc/manifest.xml /vendor/etc/vintf/manifest.xml bind
     mount none /system/etc/audio_effects.xml /vendor/etc/audio_effects.xml bind
     mount none /system/etc/audio_policy_configuration.xml /vendor/etc/audio/audio_policy_configuration.xml bind
@@ -19,11 +18,21 @@ on init
     chown system system /dev/input/event3
     chmod 0666 /dev/input/event3
 	
-service jamesdsp /system/bin/init.jamesdsp.sh
-    user root
-    oneshot
+service vendor.power-hal-1-2 /vendor/bin/hw/android.hardware.power@1.2-service
+    class hal
+    user system
+    group system
     disabled
-
+	
+service power-hal-1-2 /system/bin/hw/android.hardware.power@1.2-service_raphael
+    class hal
+    user system
+    group system input
+    disabled
+	
+    stop vendor.power-hal-1-2
+    start power-hal-1-2
+	
 service vendor.motor /vendor/bin/hw/vendor.xiaomi.hardware.motor@1.0-service
     class hal
     user system

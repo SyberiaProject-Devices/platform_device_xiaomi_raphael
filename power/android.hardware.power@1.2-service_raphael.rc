@@ -1,4 +1,5 @@
 service power-hal-1-2 /system/bin/hw/android.hardware.power@1.2-service_raphael
+    override
     class hal
     user system
     group system input

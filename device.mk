@@ -47,13 +47,16 @@ PRODUCT_PACKAGES += \
 # Common init scripts
 PRODUCT_PACKAGES += \
     init.mi_thermald.rc \
-    init.qcom.rc \
-    init.jamesdsp.sh
+    init.qcom.rc
 
 # Display
 PRODUCT_PACKAGES += \
     libvulkan \
     vendor.display.config@1.0
+	
+# DT2W
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/dt2w:system/etc/dt2w
 	
 # FM
 PRODUCT_PACKAGES += \

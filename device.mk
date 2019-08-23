@@ -60,6 +60,9 @@ PRODUCT_PACKAGES += \
     FM2 \
     libqcomfm_jni \
     qcom.fmradio
+	
+PRODUCT_BOOT_JARS += \
+    qcom.fmradio
 
 # Fingerprint
 PRODUCT_PACKAGES += \
@@ -102,6 +105,10 @@ PRODUCT_PACKAGES += \
 # Livedisplay
 PRODUCT_PACKAGES += \
     lineage.livedisplay@2.0-service-sdm
+	
+# Manifest
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/manifest.xml:system/etc/manifest.xml
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -129,6 +136,10 @@ PRODUCT_PACKAGES += \
 # Parts
 PRODUCT_PACKAGES += \
     XiaomiParts
+	
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power@1.2-service_raphael
 	
 # QTI
 PRODUCT_COPY_FILES += \

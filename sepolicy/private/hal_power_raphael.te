@@ -1,0 +1,8 @@
+type hal_power_raphael, domain;
+hal_server_domain(hal_power_raphael, hal_power)
+
+type hal_power_raphael_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hal_power_raphael)
+
+allow hal_power_raphael input_device:dir search;
+allow hal_power_raphael input_device:chr_file rw_file_perms;

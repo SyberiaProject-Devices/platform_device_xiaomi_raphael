@@ -140,6 +140,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     XiaomiParts
 	
+# Perf boot jars
+PRODUCT_BOOT_JARS += \
+    QPerformance \
+    UxPerformance
+	
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.2-service_raphael

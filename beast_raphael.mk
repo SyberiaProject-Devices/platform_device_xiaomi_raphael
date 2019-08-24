@@ -19,10 +19,10 @@ PRODUCT_MANUFACTURER := Xiaomi
 
 BEAST_BUILD_TYPE := OFFICIAL
 
-BUILD_FINGERPRINT := "Xiaomi/raphael/raphael:9/PKQ1.181121.001/V10.3.16.0.PFKCNXM:user/release-keys"
+BUILD_FINGERPRINT := "Xiaomi/davinci_eea/davinci:9/PKQ1.190302.001/V10.3.7.0.PFJEUXM:user/release-keys"
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="raphael-user 9 PKQ1.181121.001 V10.3.16.0.PFKCNXM release-keys" \
+    PRIVATE_BUILD_DESC="davinci_eea-user 9 PKQ1.190302.001 V10.3.7.0.PFJEUXM release-keys" \
     PRODUCT_NAME="raphael" \
     TARGET_DEVICE="raphael"
 

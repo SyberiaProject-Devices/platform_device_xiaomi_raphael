@@ -169,6 +169,7 @@ vendor.iop.enable_prefetch_ofr=0
 vendor.perf.iop_v3.enable=true
 vendor.perf.gestureflingboost.enable=true
 vendor.perf.workloadclassifier.enable=true
+ro.vendor.at_library=libqti-at.so
 
 # Camera
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.qualcomm.saltproject2,com.android.camera

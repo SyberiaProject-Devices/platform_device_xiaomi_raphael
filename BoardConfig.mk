@@ -95,6 +95,9 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/framework_compatibi
 DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/framework_manifest.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 
+# NFC
+TARGET_USES_NQ_NFC := true
+
 # Partitions
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 

@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/beast_raphael.mk
+    $(LOCAL_DIR)/syberia_raphael.mk

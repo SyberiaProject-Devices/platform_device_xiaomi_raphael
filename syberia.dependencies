@@ -10,9 +10,9 @@
    "branch"     : "pie"
  },
  {
-   "repository" : "BeastRoms-Devices/hardware_qcom_display-caf_sm8150",
+   "repository" : "LineageOS/android_hardware_qcom_display",
    "target_path": "hardware/qcom/display-caf/sm8150",
-   "branch"     : "pie-caf"
+   "branch"     : "lineage-16.0-caf-8150"
  },
  {
    "repository" : "BeastRoms/platform_vendor_nxp_interfaces_opensource_nfc",

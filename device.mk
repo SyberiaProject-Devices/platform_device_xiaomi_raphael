@@ -53,17 +53,26 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libvulkan \
     vendor.display.config@1.0
-	
+
+# Hostapd
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/hostapd/hostapd.accept:system/etc/hostapd/hostapd.accept \
+    $(LOCAL_PATH)/configs/hostapd/hostapd.deny:system/etc/hostapd/hostapd.deny \
+    $(LOCAL_PATH)/configs/hostapd/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf
+
+PRODUCT_PACKAGES += \
+    move_wifi_data.sh
+
 # DT2W
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/dt2w:system/etc/dt2w
-	
+
 # FM
 PRODUCT_PACKAGES += \
     FM2 \
     libqcomfm_jni \
     qcom.fmradio
-	
+
 PRODUCT_BOOT_JARS += \
     qcom.fmradio
 
@@ -77,12 +86,6 @@ PRODUCT_PACKAGES += \
     android.hidl.base@1.0_system \
     android.hidl.manager@1.0 \
     android.hidl.manager@1.0_system
-	
-#Hotspot
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/hostapd.accept:system/etc/hostapd/hostapd.accept \
-    $(LOCAL_PATH)/configs/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf \
-    $(LOCAL_PATH)/configs/hostapd.deny:system/etc/hostapd/hostapd.deny
 
 # IFAA manager
 PRODUCT_PACKAGES += \

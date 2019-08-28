@@ -1,6 +1,7 @@
 # Display
 ro.colorpick_adjust=true
 ro.display.type=oled
+ro.sf.lcd_density=440
 ro.xiaomi.bl.poll=true
 ro.eyecare.brightness.threshold=11
 ro.eyecare.brightness.level=5

@@ -189,3 +189,7 @@ ro.location.osnlp.region.package=
 
 # Sensors
 persist.vendor.sensors.enable.mag_filter=true
+
+# Syberia
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.bottom_gesture.swipe_start.threshold=85

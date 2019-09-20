@@ -5,7 +5,7 @@
    "branch"     : "dev/mday"
  },
  {
-   "repository" : "BeastRoms-Devices/vendor_xiaomi_raphael",
+   "repository" : "SOVIET-ANDROID/vendor_xiaomi_raphael",
    "target_path": "vendor/xiaomi/raphael",
    "branch"     : "pie"
  },

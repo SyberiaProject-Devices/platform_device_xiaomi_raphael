@@ -1,0 +1,92 @@
+[
+ {
+   "repository" : "SOVIET-ANDROID/vendor_xiaomi_raphael",
+   "target_path": "vendor/xiaomi/raphael",
+   "branch"     : "10.0"
+ },
+ {
+   "repository" : "SOVIET-ANDROID/kernel_xiaomi_raphael",
+   "target_path": "kernel/xiaomi/raphael",
+   "branch"     : "10.0"
+ },
+ {
+   "repository" : "SOVIET-ANDROID/platform_hardware_qcom_display",
+   "target_path": "hardware/qcom/display-caf/sm8150",
+   "branch"     : "10.0-8150"
+ },
+  {
+   "repository" : "SOVIET-ANDROID/platform_hardware_qcom_audio",
+   "target_path": "hardware/qcom/audio-caf/sm8150",
+   "branch"     : "10.0-8150"
+ },
+  {
+   "repository" : "SOVIET-ANDROID/platform_hardware_qcom_media",
+   "target_path": "hardware/qcom/media-caf/sm8150",
+   "branch"     : "10.0-8150"
+ },
+ {
+   "repository" : "LineageOS/android_hardware_qcom-caf_common",
+   "target_path": "hardware/qcom/common",
+   "branch"     : "lineage-17.1"
+ },
+ {
+   "repository" : "LineageOS/android_vendor_nxp_interfaces_opensource_nfc",
+   "target_path": "vendor/nxp/opensource/interfaces/nfc",
+   "branch"     : "lineage-17.1"
+ },
+ {
+   "repository" : "SOVIET-ANDROID/vendor_nxp_opensource_commonsys_external_libnfc-nci",
+   "target_path": "vendor/nxp/opensource/commonsys/external/libnfc-nci",
+   "branch"     : "10.0"
+ },
+ {
+   "repository" : "SOVIET-ANDROID/vendor_nxp_opensource_commonsys_frameworks",
+   "target_path": "vendor/nxp/opensource/commonsys/frameworks",
+   "branch"     : "10.0"
+ },
+ {
+   "repository" : "SOVIET-ANDROID/vendor_nxp_opensource_commonsys_packages_apps_Nfc",
+   "target_path": "vendor/nxp/opensource/commonsys/packages/apps/Nfc",
+   "branch"     : "10.0"
+ },
+ {
+   "repository" : "SOVIET-ANDROID/vendor_nxp_opensource_sn100x_halimpl",
+   "target_path": "vendor/nxp/opensource/sn100x/halimpl",
+   "branch"     : "10.0"
+ },
+ {
+   "repository" : "LineageOS/android_vendor_nxp_opensource_hidlimpl",
+   "target_path": "vendor/nxp/opensource/hidlimpl",
+   "branch"     : "lineage-17.1-sn100x"
+ },
+ {
+   "repository": "LineageOS/android_packages_resources_devicesettings",
+   "target_path": "packages/resources/devicesettings",
+   "branch": "lineage-17.1"
+ },
+ {
+   "repository" : "kdrag0n/proton-clang",
+   "target_path": "prebuilts/clang/host/linux-x86/clang-12",
+   "branch"     : "master"
+ },
+ {
+   "repository": "LineageOS/android_packages_apps_FMRadio",
+   "target_path": "packages/apps/FMRadio",
+   "branch":      "lineage-17.1"
+ },
+ {
+   "repository": "LineageOS/android_vendor_qcom_opensource_fm-commonsys",
+   "target_path": "vendor/qcom/opensource/fm-commonsys",
+   "branch":      "lineage-17.1"
+ },
+ {
+   "repository": "LineageOS/android_vendor_qcom_opensource_libfmjni",
+   "target_path": "vendor/qcom/opensource/libfmjni",
+   "branch":      "lineage-17.1"
+ },
+ {
+   "repository": "SOVIET-ANDROID/platform_vendor_google-customization",
+   "target_path": "vendor/google-customization",
+   "branch":      "10.0"
+ }
+]

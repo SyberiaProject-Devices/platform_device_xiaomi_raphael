@@ -262,9 +262,9 @@ vendor/lib64/libcom.qti.chinodeutils.so
 vendor/lib64/libFaceGrade.so
 vendor/lib64/libHalSuperSensorServer.so
 vendor/lib64/libmegface.so
-vendor/lib64/libMegviiFacepp-0.5.2.so
+vendor/lib64/libMegviiFacepp-0.5.2.so|b8521eb08b2d8e157b86f9973ddd5810e7b6de5b
 vendor/lib64/libmialgoengine.so
-vendor/lib64/libmialgo_basic.so
+vendor/lib64/libmialgo_basic.so|abeba4f8d760c83a72fb8bbc403ecf8f7a9fef0d
 vendor/lib64/libmialgo_fs.so
 vendor/lib64/libmialgo_rfs.so
 vendor/lib64/libmialgo_sd.so
@@ -323,7 +323,7 @@ vendor/etc/camera/LDC_PACKDATA_VENDORID_0x01.bin
 vendor/etc/camera/LDC_PACKDATA_VENDORID_0x07.bin
 vendor/etc/camera/LDC_table_src1.dat
 vendor/etc/camera/lf_facerank_model.bin
-vendor/etc/camera/megviifacepp_0_5_2_model
+vendor/etc/camera/megviifacepp_0_5_2_model|1f0cdc706d3853114ecf7a2c0c7436238fcdf258
 vendor/etc/camera/sceneDetection.xml
 vendor/etc/camera/sdm_ys_32p_120_21_5_perturb50.bin
 
@@ -393,13 +393,13 @@ vendor/lib64/libdpmqmihal.so
 vendor/bin/qseecomd
 vendor/lib/libcpion.so
 vendor/lib/libQSEEComAPI.so
-vendor/lib/liboemcrypto.so
+vendor/lib/liboemcrypto.so|7a8be0a1b2b6f7441c658dd1a1550510c8c154ee
 vendor/lib64/libcpion.so
 vendor/lib64/libdrmfs.so
 vendor/lib64/libdrmtime.so
 vendor/lib64/libGPreqcancel.so
 vendor/lib64/libGPreqcancel_svc.so
-vendor/lib64/liboemcrypto.so
+vendor/lib64/liboemcrypto.so|b99e70b63bb2fa92fd5660382b6b16e1998968cc
 vendor/lib64/libops.so
 vendor/lib64/libqisl.so
 vendor/lib64/libQSEEComAPI.so
@@ -418,7 +418,6 @@ vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc
 vendor/lib/libbase64.so
 vendor/lib/libcppf.so
 vendor/lib/libdrmfs.so
-vendor/lib/liboemcrypto.so
 vendor/lib/librmp.so
 vendor/lib/mediadrm/libwvdrmengine.so
 vendor/lib64/libbase64.so

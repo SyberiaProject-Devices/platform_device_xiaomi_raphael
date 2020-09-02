@@ -26,9 +26,6 @@ $(call inherit-product, vendor/google-customization/config.mk)
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.apex.updatable=true
 
-# Setup dalvik vm configs
-$(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
-
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/xiaomi/raphael/raphael-vendor.mk)
 

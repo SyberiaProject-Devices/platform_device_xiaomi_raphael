@@ -129,6 +129,9 @@ ro.vendor.qti.va_aosp.support=1
 # Time Services
 persist.timed.enable=true
 
+# Use Vulkan backend for Skia UI rendering
+debug.hwui.renderer=skiavk
+
 # WiFi
 config.disable_rtt=true
 

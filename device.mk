@@ -72,6 +72,7 @@ PRODUCT_PACKAGES += \
     audio.hearing_aid.default
 
 PRODUCT_PACKAGES += \
+    libbatterylistener \
     libvolumelistener \
     libqcomvisualizer \
     libqcomvoiceprocessing \

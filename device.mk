@@ -261,6 +261,12 @@ PRODUCT_PACKAGES += \
     init.xiaomi.rc \
     ueventd.qcom.rc
 
+# F2FS
+PRODUCT_PACKAGES += \
+    sg_write_buffer \
+    f2fs_io \
+    check_f2fs
+
 # IPACM
 PRODUCT_PACKAGES += \
     ipacm \

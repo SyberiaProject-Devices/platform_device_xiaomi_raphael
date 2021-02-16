@@ -35,7 +35,7 @@ def AddImage(info, basename, dest, incremental):
   info.script.AppendExtra('package_extract_file("%s", "%s");' % (name, dest))
 
 def OTA_InstallEnd(info, incremental):
-  info.script.Print("Patching firmware images...")
+  info.script.Print("Patching dtbo and vbmeta images...")
   AddImage(info, "dtbo.img", "/dev/block/bootdevice/by-name/dtbo", incremental)
   AddImage(info, "vbmeta.img", "/dev/block/bootdevice/by-name/vbmeta", incremental)
   return

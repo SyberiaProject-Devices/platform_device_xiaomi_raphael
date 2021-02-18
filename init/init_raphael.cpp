@@ -88,5 +88,6 @@ void vendor_load_properties() {
             "Xiaomi", "raphael", "Mi 9T Pro");
     }
     load_dalvik_properties();
+    property_override("ro.apex.updatable", "false");
     property_override("ro.boot.verifiedbootstate", "green");
 }

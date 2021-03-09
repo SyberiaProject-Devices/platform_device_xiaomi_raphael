@@ -17,6 +17,7 @@ $(call inherit-product, device/xiaomi/raphael/device.mk)
 
 # Inherit some common Syberia stuff.
 $(call inherit-product, vendor/syberia/common.mk)
+SYBERIA_BUILD_TYPE := OFFICIAL
 
 # Bootanimation
 TARGET_BOOT_ANIMATION_RES := 1080

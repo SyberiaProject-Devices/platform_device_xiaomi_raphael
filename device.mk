@@ -537,3 +537,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Smart Charge
 PRODUCT_PACKAGES += \
     vendor.syberia.smartcharge@1.0-service
+
+# Updater
+PRODUCT_PACKAGES += \
+    Updater

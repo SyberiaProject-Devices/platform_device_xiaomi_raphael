@@ -222,6 +222,10 @@ USE_SENSOR_MULTI_HAL := true
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 include device/xiaomi/raphael-sepolicy/raphael-sepolicy.mk
 
+# Lvedsiplay
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy-lineage/dynamic
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy-lineage/vendor
+
 # Vendor init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_raphael
 TARGET_RECOVERY_DEVICE_MODULES := libinit_raphael

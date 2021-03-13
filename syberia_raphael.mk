@@ -15,11 +15,24 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/xiaomi/raphael/device.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Syberia stuff.
+$(call inherit-product, vendor/syberia/common.mk)
+
+# Bootanimation
+TARGET_BOOT_ANIMATION_RES := 1080
+
+# FaceUnlock
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
+# FOD
+TARGET_HAS_FOD := true
+TARGET_WANTS_FOD_ANIMATIONS := true
+
+# GApps
+TARGET_GAPPS_ARCH := arm64
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_raphael
+PRODUCT_NAME := syberia_raphael
 PRODUCT_DEVICE := raphael
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI 9T Pro

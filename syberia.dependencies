@@ -1,10 +1,5 @@
 [
    {
-      "repository":"LineageOS/android_packages_resources_devicesettings",
-      "target_path":"packages/resources/devicesettings",
-      "branch":"lineage-18.1"
-   },
-   {
       "remote":"github",
       "repository":"SOVIET-ANDROID/platform_hardware_qcom_display",
       "target_path":"hardware/qcom-caf/sm8150/display",
@@ -24,7 +19,7 @@
    },
    {
       "remote":"github",
-      "repository":"SOVIET-ANDROID/android_device_xiaomi_raphael-sepolicy ",
+      "repository":"SOVIET-ANDROID/android_device_xiaomi_raphael-sepolicy",
       "target_path":"device/xiaomi/raphael-sepolicy ",
       "revision":"11.0"
    },
@@ -41,8 +36,27 @@
       "revision":"11.0"
    },
    {
-      "repository":"kdrag0n/proton-clang",
-      "target_path":"prebuilts/clang/host/linux-x86/clang-proton",
-      "branch":"master"
+      "remote":"github",
+      "repository": "LineageOS/android_packages_apps_FMRadio",
+      "target_path": "packages/apps/FMRadio",
+      "branch":      "lineage-18.1"
+   },
+   {
+      "remote":"github",
+      "repository": "LineageOS/android_vendor_qcom_opensource_fm-commonsys",
+      "target_path": "vendor/qcom/opensource/fm-commonsys",
+      "branch":      "lineage-18.1"
+   },
+   {
+      "remote":"github",
+      "repository": "LineageOS/android_vendor_qcom_opensource_libfmjni",
+      "target_path": "vendor/qcom/opensource/libfmjni",
+      "branch":      "lineage-18.1"
+   },
+   {
+      "remote":"gitlab",
+      "repository":"Panchajanya1999/azure-clang",
+      "target_path":"prebuilts/clang/host/linux-x86/clang-azure",
+      "branch":"main"
    }
 ]

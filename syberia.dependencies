@@ -55,8 +55,13 @@
    },
    {
       "remote":"gitlab",
-      "repository":"Panchajanya1999/azure-clang",
-      "target_path":"prebuilts/clang/host/linux-x86/clang-azure",
-      "branch":"main"
+      "repository":"kondors1995/android_vendor_googlecamera",
+      "target_path":"vendor/GoogleCamera",
+      "branch":"master"
+   },
+   {
+      "repository":"kdrag0n/proton-clang",
+      "target_path":"prebuilts/clang/host/linux-x86/clang-proton",
+      "branch":"master"
    }
 ]

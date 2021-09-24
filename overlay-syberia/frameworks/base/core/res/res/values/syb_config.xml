@@ -25,4 +25,6 @@
     <!-- Whether notify fingerprint client of successful cancelled authentication -->
     <bool name="config_notifyClientOnFingerprintCancelSuccess">true</bool>
 
+    <!-- Gaming Mode FPSInfoService FPS node file path -->
+    <string name="config_gamingmode_fpsInfoSysNode" translatable="false">/sys/class/drm/card0/sde-crtc-0/measured_fps</string>
 </resources>

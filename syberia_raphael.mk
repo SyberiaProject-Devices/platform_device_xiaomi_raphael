@@ -12,18 +12,18 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 # Inherit from raphael device
 $(call inherit-product, device/xiaomi/raphael/device.mk)
 
-# Inherit some common Arrow stuff.
-$(call inherit-product, vendor/arrow/config/common.mk)
+# Inherit some common syberia stuff.
+$(call inherit-product, vendor/syberia/common.mk)
+SYBERIA_BUILD_TYPE := OFFICIAL
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := arrow_raphael
+PRODUCT_NAME := syberia_raphael
 PRODUCT_DEVICE := raphael
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi K20 Pro
 PRODUCT_MANUFACTURER := Xiaomi
 
 TARGET_INCLUDE_PIXEL_CHARGER := true
-DEVICE_MAINTAINER := TH779, kubersharma001
 
 PRODUCT_CHARACTERISTICS := nosdcard
 

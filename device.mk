@@ -16,7 +16,7 @@ $(call inherit-product, vendor/xiaomi/raphael/raphael-vendor.mk)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-arrow
+    $(LOCAL_PATH)/overlay-syberia
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
@@ -151,16 +151,9 @@ PRODUCT_PACKAGES += \
     libcamera2ndk_vendor \
     libdng_sdk.vendor \
     libgui_vendor \
+    Snap \
     vendor.qti.hardware.camera.device@1.0.vendor \
     vendor.xiaomi.hardware.motor@1.0.vendor
-
-ifeq ($(ARROW_GAPPS), true)
-PRODUCT_PACKAGES += \
-    GCamGOPrebuilt
-else
-PRODUCT_PACKAGES += \
-    Snap
-endif
 
 # Component overrides
 PRODUCT_COPY_FILES += \
@@ -449,3 +442,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
+
+# Updater
+PRODUCT_PACKAGES += \
+    Updater

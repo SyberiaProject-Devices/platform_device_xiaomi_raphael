@@ -10,7 +10,7 @@
     <protected-broadcast android:name="com.android.systemui.doze.pulse" />
 
     <uses-sdk
-        android:targetSdkVersion="29"/>
+        android:targetSdkVersion="30"/>
 
     <application
         android:label="CustomDoze"

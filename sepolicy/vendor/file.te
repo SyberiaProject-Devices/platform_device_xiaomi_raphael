@@ -7,3 +7,6 @@ type public_adsprpcd_file, file_type;
 
 # Nodes
 type sysfs_fod, sysfs_type, fs_type;
+
+# Livedisplay
+type vendor_sysfs_hbm, sysfs_type, fs_type;

@@ -63,8 +63,8 @@
       "branch":"12.0"
    },
    {
-      "repository":"Panchajanya1999/azure-clang",
-      "target_path":"prebuilts/clang/host/linux-x86/azure-proton",
+      "repository":"zlatanr/dora-clang-1",
+      "target_path":"prebuilts/clang/host/linux-x86/azure-dora",
       "branch":"main"
    }
 ]

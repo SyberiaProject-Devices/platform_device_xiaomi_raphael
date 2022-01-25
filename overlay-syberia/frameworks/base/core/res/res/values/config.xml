@@ -15,4 +15,7 @@
          Should be enabled for OLED devices to reduce/prevent burn in on the status bar
          and on the navigation bar and disabled for all other devices. -->
     <bool name="config_statusBarBurnInProtection">true</bool>
+
+    <!-- Gaming mode FPSInfoService FPS node file path -->
+    <string name="config_gamingmode_fpsInfoSysNode" translatable="false">/sys/class/drm/sde-crtc-0/measured_fps</string>
 </resources>

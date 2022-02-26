@@ -3,3 +3,6 @@ allow system_app sysfs_zram:file r_file_perms;
 
 allow system_app incremental_prop:file { getattr open read };
 allow system_app zygote:unix_stream_socket getopt;
+
+# Zygote
+allow system_app zygote:unix_stream_socket { getopt };

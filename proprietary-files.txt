@@ -881,15 +881,15 @@ vendor/lib64/libperipheral_client.so|9bfd41e276e16b8f7c6808f3d87531fc5be4cdd5
 vendor/lib64/libspcom.so|7cc4390e7caf520586c22cdb7219842fa5d6ed2c
 
 # Perf Configs
-vendor/etc/lm/AdaptLaunchFeature.xml
-vendor/etc/lm/AppClassifierFeature.xml
-vendor/etc/lm/GameOptimizationFeature.xml
-vendor/etc/perf/commonresourceconfigs.xml
-vendor/etc/perf/perfboostsconfig.xml
-vendor/etc/perf/perfconfigstore.xml
-vendor/etc/perf/targetconfig.xml
-vendor/etc/perf/targetresourceconfigs.xml
-vendor/etc/powerhint.xml
+vendor/etc/lm/AdaptLaunchFeature.xml|bc226e5b64cae1d0bb637eb316626868b97e7c3f
+vendor/etc/lm/AppClassifierFeature.xml|80bcbf8fc50ed706e8549432140323dbb9e8ae4c
+vendor/etc/lm/GameOptimizationFeature.xml|5314e8dfdf363d0fbe4599ba64e3e765878569b9
+vendor/etc/perf/commonresourceconfigs.xml|c03bd36054bb5d327ad12dc711b58b3f658d261c
+vendor/etc/perf/perfboostsconfig.xml|93e57b38e327bfbc174e925d639745e66949229b
+vendor/etc/perf/perfconfigstore.xml|62f780c6f974a62d18a66d0dcee30efb04903512
+vendor/etc/perf/targetconfig.xml|95f511bb4030b2755a0b340814fe41cccac994ab
+vendor/etc/perf/targetresourceconfigs.xml|44e33511b57320fade366bfd5be83dcf5930f540
+vendor/etc/powerhint.xml|ee26fbedb113b08c50421d4fab6d0b5062c91ed4
 
 # Perf - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
 vendor/bin/hw/vendor.qti.hardware.perf@2.2-service|f1df5e59faca69424b86b2deeb203ab4096e840d
@@ -1059,7 +1059,7 @@ vendor/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so|33f0994f049459b6130d11c7c
 vendor/lib64/vendor.qti.hardware.radio.internal.deviceinfo@1.0.so|c1110e2a16fd7505403ff5fdb188f4bf79a15a66
 vendor/lib64/vendor.qti.hardware.radio.lpa@1.0.so|0adf6914c748d64478bc1f8621b1019718b98873
 vendor/lib64/vendor.qti.hardware.radio.lpa@1.1.so|4f5babb3ab95e75ec83021630088b6bf5f29e8a9
-vendor/lib64/vendor.qti.hardware.radio.lpa@1.2.so|4f5babb3ab95e75ec83021630088b6bf5f29e8a9
+vendor/lib64/vendor.qti.hardware.radio.lpa@1.2.so|44b695670cfac3eef96a156ae69feb9799693d92
 vendor/lib64/vendor.qti.hardware.radio.qcrilhook@1.0.so|e4200bbfa997049ec71474fe82c77bbdb8aa8b0d
 vendor/lib64/vendor.qti.hardware.radio.qtiradio@1.0.so|878abcaed56bbb9cbe075a592a96f551c41574dd
 vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.0.so|613283f40fb04592abc8ae4f506f3fca7a2d1a3a
@@ -1429,9 +1429,9 @@ vendor/lib/libmmrtpdecoder_proprietary.so|227a26b9ec9ee6f2dc95de47b713b215e8b6c9
 vendor/lib/libmmrtpencoder_proprietary.so|d0aec32b8e565912ecc475bad40ed626ac1ee04d
 vendor/lib/libwfdcodecv4l2_proprietary.so|5f38581c9cfa63e2225bdd7ca263999c3bf92da4
 vendor/lib/libwfdcommonutils_proprietary.so|069de88af766248366b37acf7bee10dd38615bcf
-vendor/lib/libwfdconfigutils_proprietary.so|b298d048969c771a2acd5f707cef118a1da929f9
+vendor/lib/libwfdconfigutils_proprietary.so|c334a9ed4b1934bbd69e138310b061a8a7bf0f80
 vendor/lib/libwfddisplayconfig_proprietary.so|cf19ff465e7f48f5ee585136a56b5aedf24999b9
-vendor/lib/libwfdmminterface_proprietary.so|a8b3ba12a87d4a5369010d8737bf7a4114a74b77
+vendor/lib/libwfdmminterface_proprietary.so|a63d2c309ec5d86f0db036eaf23ea1ea400e6978
 vendor/lib/libwfdmmservice_proprietary.so|a2e5a10e37319e5afe16f3d0235be365b4acecc2
 vendor/lib/libwfdmmsrc_proprietary.so|ae6a9ab459f1d5ff3069fff3de82eaa2db81c08e
 vendor/lib/libwfdrtsp_proprietary.so|e719d1a1d1b6f49acbdab6034b7a05911d6e0ff3
@@ -1451,18 +1451,18 @@ vendor/lib64/libwfddisplayconfig_proprietary.so|fb6a6c36346a30662d0f79bb8a8656e3
 vendor/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so|86b6ce7b14bcc8f6ab3215962aab694404c27d14
 
 # WiFi Display HDCP - from LA.UM.9.1.r1-10900-SMxxx0.0
-vendor/bin/wfdhdcphalservice|c459a9dce083f9a2b2d8c7c49903514b87528fda
+vendor/bin/wfdhdcphalservice|40c3d329f49cbb56286d6a550cc8b12ac95048df
 vendor/etc/init/android.hardware.drm@1.1-service.wfdhdcp.rc|c266f08783a17f6583e3f22c85e55b0c200442ea
 vendor/etc/seccomp_policy/wfdhdcphalservice.policy|23b46af886f3233c2bddff87507ae8d37c31c022
 vendor/lib/libhdcp1prov.so|218ceb9d2809a670cc6d4284b71fcc7f5a3c5903
-vendor/lib/libhdcp2p2prov.so|ccb3bffc88e46c9f9e63c3944461470d36bfafac
+vendor/lib/libhdcp2p2prov.so|75ec44aa9699b74a82c0bd04cb1b791193e67ea8
 vendor/lib/libhdcpsrm.so|fe959f9d6c73e4857b1edd984a41ff59a89e02d3
 vendor/lib/libmm-hdcpmgr.so|32391ae971428edd52ec7941266410737f679816
 vendor/lib/libwfdhdcpcp.so|4522505c0ad5a2fb5bb8e05bf4b5486f8ee1b77c
 vendor/lib/libwfdhdcpservice_proprietary.so|c4d8a43e232008dfd3c7c6aef4b4f6a8dd318406
 vendor/lib/libwfdmodulehdcpsession.so|b6fb986416e54b01aff327f9e225dbe91033f934
 vendor/lib64/libhdcp1prov.so|395c39ef92c9145efe908cf7f8ed49c307b7708a
-vendor/lib64/libhdcp2p2prov.so|0bf6395b77d15ab7c38873fc7c0797b4bba0cf66
+vendor/lib64/libhdcp2p2prov.so|5d9dfc79157b996708a55268117f1a50d6b71551
 vendor/lib64/libhdcpsrm.so|5058280e6273008851983ed4389f86fad9de68d4
 vendor/lib64/libmm-hdcpmgr.so|83c232564e9c828b67492207a75ef85866839040
 vendor/lib64/libwfdhdcpcp.so|bb4fc9d0020a7ec996310f1588c256f659b7809c

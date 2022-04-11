@@ -158,8 +158,8 @@ PRODUCT_PACKAGES += \
     vendor.xiaomi.hardware.motor@1.0.vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
-PRODUCT_PACKAGES += \
-    GoogleCamera
+#PRODUCT_PACKAGES += \
+#    GoogleCamera
 
 # Component overrides
 PRODUCT_COPY_FILES += \

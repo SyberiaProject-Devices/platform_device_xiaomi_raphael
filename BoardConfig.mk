@@ -160,6 +160,9 @@ TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp
 # QCOM
 BOARD_USES_QCOM_HARDWARE := true
 
+# Compression
+PRODUCT_FS_COMPRESSION := 1
+
 # Recovery
 BOARD_INCLUDE_RECOVERY_DTBO := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom

@@ -308,6 +308,10 @@ PRODUCT_PACKAGES += \
     f2fs_io \
     check_f2fs
 
+# IFAA manager
+PRODUCT_PACKAGES += \
+    IFAAService
+
 # IPACM
 PRODUCT_PACKAGES += \
     ipacm \

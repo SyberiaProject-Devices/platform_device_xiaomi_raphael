@@ -13,9 +13,6 @@ vendor.bluetooth.soc=cherokee
 # Camera
 persist.vendor.camera.privapp.list=com.android.camera
 
-# Display
-debug.sf.disable_backpressure=1
-
 # FUSE passthrough
 persist.sys.fuse.passthrough.enable=true
 

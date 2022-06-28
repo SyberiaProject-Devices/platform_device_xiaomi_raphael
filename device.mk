@@ -534,3 +534,7 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     Updater
 
+# Blurs
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    ro.sf.blurs_are_expensive=1 \
+    ro.surface_flinger.supports_background_blur=1

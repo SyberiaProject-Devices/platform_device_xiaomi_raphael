@@ -11,13 +11,18 @@ $(call inherit-product, vendor/xiaomi/raphael/raphael-vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-syberia
-
 PRODUCT_ENFORCE_RRO_TARGETS := *
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
-    $(LOCAL_PATH)/overlay/packages/apps/CarrierConfig
+
+PRODUCT_PACKAGES += \
+    CarrierConfigOverlay \
+    FaceUnlockServiceOverlay \
+    FrameworksResRaphael \
+    SettingsResRaphael \
+    SystemUIResRaphael \
+    TelephonyResCommon \
+    TetheringConfigOverlay \
+    WifiResCommon \
+    WifiResRaphael
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
@@ -508,7 +513,6 @@ PRODUCT_PACKAGES += \
     libwpa_client \
     vendor.qti.hardware.wifi.hostapd@1.2.vendor \
     vendor.qti.hardware.wifi.supplicant@2.2.vendor \
-    WifiResCommon \
     wpa_supplicant \
     wpa_supplicant.conf
 

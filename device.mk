@@ -201,8 +201,10 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 # IORap with perfetto
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.device_config.runtime_native_boot.iorap_readahead_enable=true \
-    iorapd.perfetto.enable=true
+    ro.iorapd.enable=false \
+    iorapd.perfetto.enable=false \
+    iorapd.readahead.enable=false \
+    persist.device_config.runtime_native_boot.iorap_readahead_enable=false
 
 # Dolby
 PRODUCT_COPY_FILES += \

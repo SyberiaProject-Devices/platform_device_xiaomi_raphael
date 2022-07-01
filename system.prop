@@ -12,6 +12,7 @@ vendor.bluetooth.soc=cherokee
 
 # Camera
 persist.vendor.camera.privapp.list=com.android.camera
+log.tag.CHIUSECASE=ERROR
 
 # FUSE passthrough
 persist.sys.fuse.passthrough.enable=true

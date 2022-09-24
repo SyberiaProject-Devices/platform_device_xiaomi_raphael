@@ -30,6 +30,9 @@ EXTRA_UDFPS_ANIMATIONS := true
 # FaceUnlock
 TARGET_FACE_UNLOCK_SUPPORTED := true
 
+# Gapps
+WITH_GMS=true
+
 PRODUCT_CHARACTERISTICS := nosdcard
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi

@@ -54,8 +54,5 @@
 # UFS
 /sys/devices/platform/soc/[a-f0-9]+.ufshc/clkgate_enable        u:object_r:vendor_sysfs_scsi_host:s0
 
-# Dolby
-/(vendor|system/vendor)/bin/hw/vendor\.dolby\.hardware\.dms@1\.0-service                     u:object_r:hal_dms_default_exec:s0
-
 # Haptic
 /sys/module/qti_haptics/parameters/vmax_mv_override                                                     u:object_r:sysfs_vibrator:s0

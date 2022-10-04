@@ -2,10 +2,6 @@ allow init adsprpcd_file:file mounton;
 
 set_prop(vendor_init, vendor_power_prop)
 
-# Dolby
-allow init vendor_data_file:file lock;
-allow init hal_audio_default:binder call;
-
 # Allow init to read and write to sysfs_vibrator
 allow init sysfs_vibrator:dir search;
 allow init sysfs_vibrator:file rw_file_perms;
